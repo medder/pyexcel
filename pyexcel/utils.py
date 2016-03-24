@@ -103,7 +103,9 @@ def yield_from_records(records):
     if len(records) < 1:
         yield []
     else:
-        keys = sorted(records[0].keys())
+        # modify by lv_medder
+        # keys = sorted(records[0].keys())
+        keys = records[0].keys()
         yield list(keys)
         for r in records:
             row = []
